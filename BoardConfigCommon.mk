@@ -120,7 +120,6 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CLANG_COMPILE := true
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -169,6 +168,9 @@ VENDOR_SECURITY_PATCH := 2022-07-05
 # SEPolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

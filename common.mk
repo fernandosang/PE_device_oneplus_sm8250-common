@@ -305,6 +305,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     EvolutionFrameworksResCommon \
@@ -315,6 +316,8 @@ PRODUCT_PACKAGES += \
     OPlusExtrasResCommon \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
+    OnePlusGalleryOverlay \
+    OPSoundTunerOverlay \
     WifiResTarget
 
 # Partitions
@@ -331,6 +334,10 @@ PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # RIL
 PRODUCT_PACKAGES += \

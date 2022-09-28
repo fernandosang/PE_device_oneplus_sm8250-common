@@ -51,6 +51,10 @@ on boot
     chown system system /proc/wireless/enable_tx
     chmod 0666 /proc/wireless/enable_tx
 
+    # Quiet mode
+    chown system system /proc/wireless/quiet_mode
+    chmod 0666 /proc/wireless/quiet_mode
+
     # TP-edge limit 
     chown system system /proc/touchpanel/tpedge_limit_enable
     chown system system /proc/touchpanel/oplus_tp_limit_enable

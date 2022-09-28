@@ -61,6 +61,10 @@ on boot
     chmod 0666 /proc/touchpanel/tpedge_limit_enable
     chmod 0666 /proc/touchpanel/oplus_tp_limit_enable
 
+    # USB-OTG
+    chown system /sys/devices/virtual/oplus_chg/usb/otg_switch
+    chmod 0666 /sys/devices/virtual/oplus_chg/usb/otg_switch
+
     # Vibration intensity
     chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/level
     chmod 0666 /sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/level
